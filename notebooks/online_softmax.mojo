@@ -46,8 +46,9 @@ struct Matrix[rows: Int, cols: Int]:
     fn store[nelts: Int](self, y: Int, x: Int, val: SIMD[type, nelts]):
         return self.data.store[width=nelts](y * self.cols + x, val)
 
+
 def main():
-    var m0 = Matrix[1,1 ].rand()
+    var m0 = Matrix[1, 1].rand()
     print(m0[0, 0])
     var m1 = m0^
     print(m1[0, 0])
